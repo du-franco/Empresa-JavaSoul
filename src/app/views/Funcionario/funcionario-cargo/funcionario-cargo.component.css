@@ -1,0 +1,16 @@
+.row{
+  overflow: auto;
+  float: left;
+}
+.func-card{
+  width: 50px;
+}
+.card{
+  padding-right: px;
+}
+.fas{
+  cursor: pointer;
+}
+li {
+  list-style-type: none;
+}

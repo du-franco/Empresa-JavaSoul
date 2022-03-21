@@ -1,0 +1,128 @@
+.btn-login{
+  text-decoration: none;
+  background-color: #E92132;
+  color: #fff;
+  border-radius: 20px;
+}
+
+.text-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 66.12rem;
+  margin: 3.68rem auto 11.13rem auto;
+}
+
+.texts p{
+  font: 600 3.875rem 'Helvetica';
+}
+
+.texts h2{
+  font: 600 3.25rem 'Helvetica';
+  margin-bottom: 4rem;
+}
+
+.login-container{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-end;
+  justify-content:right;
+
+  height: 75vh;
+  background: #ffffff;
+  box-shadow: inset 18px 18px 30px #ffffff, inset -18px -18px 30px #FFFFFF;
+}
+
+.img{
+ position: absolute;
+ left: 90px;
+ top: 178px;
+}
+
+.login{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 27.77rem;
+  width: 25.46rem;
+  margin-top: 1px;
+  background: #D3E7EE;
+  box-shadow: 18px 18px 30px #404040, -18px -18px 30px #FFFFFF;
+  border-radius: 20px;
+}
+
+.login-container img{
+  height: 50px;
+  opacity: 0.5;
+}
+
+.login h2{
+  font: 600 1.88rem 'Helvetica';
+  color: #E92132;
+  margin-bottom: 0;
+  margin-top: 1.56rem;
+}
+
+.login p{
+  font: 600 0.995rem 'Helvetica';
+  color: #E67F7F;
+  margin-top: 0.875rem;
+  margin-bottom: 0.875rem;
+}
+
+.inpts-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 1.1rem;
+}
+
+.inpt{
+  margin-top: 1.05rem;
+  background: #D3E7EE;
+  box-shadow: inset 18px 18px 30px #BFD4DE, inset -18px -18px 30px #FFFFFF;
+  border: 0;
+  height: 2.11rem;
+  width: 15rem;
+  padding-left: 1.04rem;
+  border-radius: 1.25rem;
+}
+
+.inpt::-webkit-input-placeholder{
+  font: 600 1.11rem 'Helvetica';
+  color: #E67F7F;
+}
+
+.inpt:focus{
+  outline: 0;
+}
+
+.etr{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #E92132;
+  font: 600 0.995rem 'Helvetica';
+  margin-top: 4.63rem;
+  margin-bottom: 1.5rem;
+  height: 2.11rem;
+  width: 6.48rem;
+  background: #ECF0F3;
+  box-shadow: 18px 18px 30px #BFD4DE, -18px -18px 30px #FFFFFF;
+  border-radius: 10.25rem;
+}
+
+.etr:hover{
+  box-shadow: inset 18px 18px 30px #D3E7EE, inset -18px -18px 30px #f0f0f0;
+  color: #E92132;
+}
+
+.cds{
+  font: 400 0.75rem 'Helvetica';
+  color: #E67F7F;
+}
+.cds:hover{
+  color: #E67F7F;
+}

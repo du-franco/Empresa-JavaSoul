@@ -1,0 +1,88 @@
+<div class="titulo" style="width: 100%;">
+  <div class="card-body">
+    <h5 class="card-title text-center">Listagem de Funcionários da Empresa:</h5>
+    <hr>
+  </div>
+</div>
+
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="searchbar">
+      <input class="search_input border-3 border-dark" type="text" name="" placeholder="Search..." [(ngModel)]="filter">
+      <a class="search_icon"><i class="fas fa-search"></i></a>
+    </div>
+  </div>
+</div>
+
+<div *ngFor="let funcionario of func | filter:filter; let i = index">
+  <div class="container-fluid">
+    <div class="row justify-content-center mt-5 mx-1">
+      <div class="card m-5 border-5 border-dark bg-white" style=" width: 300px;">
+        <div class="card-body">
+          <img class="card-img" src="{{funcionario.func_foto}}" alt="">
+
+          <div class="card-title text-center text-black">
+            <p>
+              <b>Código:
+                {{funcionario.id_funcionario}}
+              </b>
+            </p>
+            <p>
+              <b>Nome:
+                {{funcionario.func_nome}}
+              </b>
+            </p>
+            <p>
+              <b>Cidade:
+                {{funcionario.func_cidade}}
+              </b>
+            </p>
+            <p>
+              <b>
+                {{funcionario.car_nome}}
+              </b>
+            </p>
+            <p>
+              <b>
+                {{funcionario.car_descricao}}
+              </b>
+            </p>
+            <div>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  <i class="fa fa-bars"></i>
+                </a>
+                <ul class="dropdown-menu bg-white" aria-labelledby="navbarDropdown">
+                  <li>
+                    <i routerLink="/edicaoFuncionario/{{funcionario.id_funcionario}}/{{funcionario.id_cargo}}"
+                      class="fas fa-edit text-info mx-2" >
+                    </i>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <i routerLink="/exclusaoFuncionario/{{funcionario.id_funcionario}}"
+                      class="fas fa-trash-alt text-danger mx-2">
+                    </i>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <i routerLink="/cadastrarBonificacao/{{funcionario.id_funcionario}}"
+                      class="fas fa-money-check text-success mx-2">
+                    </i>
+                  </li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li>
+                    <i routerLink="/listaBonificacoes/{{funcionario.id_funcionario}}"
+                      class="fas fa-cash-register text-primary mx-2">
+                    </i>
+                  </li>
+                </ul>
+              </li>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

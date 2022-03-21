@@ -1,0 +1,29 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Cadastro de novo Funcionário</h5>
+    <hr>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Nome do Funcionário</label>
+        <input type="text" class="form-control" [(ngModel)]="funcionario.func_nome" name="func_nome">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cidade do Funcionário</label>
+        <input type="text" class="form-control" [(ngModel)]="funcionario.func_cidade" name="func_cidade">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cargo do Funcionário</label>
+        <input type="text" class="form-control" [(ngModel)]="funcionario.func_cargo" name="func_cargo">
+        <b><p class="paragrafo">Nome do Cargo: {{nomeCargo}}</p></b>
+      </div>
+      <div class="mt-3">
+        <label class="form-label">Foto do Funcionário</label>
+        <input type="file" class="form-control" [disabled]="!funcionarioCadastrado" (change)="subirFoto($event)"
+          name="func_foto">
+      </div>
+      <button (click)="cadastrarFuncionario()" class="btn btn-outline-primary mt-3 ">Cadastrar</button>
+      <button (click)="cancelarCadastro()" class="btn btn-outline-secondary mt-3 mx-3">Cancelar</button>
+    </form>
+
+  </div>
+</div>

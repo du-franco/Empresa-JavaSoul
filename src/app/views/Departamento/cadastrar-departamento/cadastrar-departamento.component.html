@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Cadastro de novo Departamento</h5>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Nome do Departamento</label>
+        <input type="text" class="form-control" [(ngModel)]="departamento.dep_nome" name="dep_nome">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descrição da Equipe do Departamento</label>
+        <input type="text" class="form-control" [(ngModel)]="departamento.dep_equipe" name="dep_equipe">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descrição do Departamento</label>
+        <input type="text" class="form-control" [(ngModel)]="departamento.dep_descricao" name="dep_descricao">
+      </div>
+      <button (click)="cadastrarDepartamento()"  class="btn btn-outline-primary ">Cadastrar</button>
+      <button (click)="cancelarCadastro()" class="btn btn-outline-danger mx-3" type="reset">Cancelar</button>
+    </form>
+    <hr>
+
+  </div>

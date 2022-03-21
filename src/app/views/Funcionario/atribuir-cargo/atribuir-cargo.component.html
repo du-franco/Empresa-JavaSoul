@@ -1,0 +1,63 @@
+<div class="container">
+  <div class="row">
+    <div class="col-7">
+      <div class="card mt-5">
+        <div class="card-body">
+          <h5 class="card-title">Dados do Funcionário</h5>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Nome do Funcionário</label>
+              <input type="text" readonly class="form-control" [(ngModel)]="funcionario.func_nome" name="func_nome">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Cidade do Funcionário</label>
+              <input type="text"readonly class="form-control"  [(ngModel)]="funcionario.func_cidade" name="func_cidade">
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Cargo do Funcionário</label>
+              <input type="text" readonly class="form-control" [(ngModel)]="funcionario.func_cargo" name="func_cargo">
+            </div>
+            <button  routerLink="/cargo" class="btn btn-outline-dark mx-3">Cancelar</button>
+          </form>
+          <hr>
+
+        </div>
+      </div>
+    </div>
+    <div class="col-5">
+      <div class="card mt-5">
+        <h5 class="card-title mx-3">Cargo do Funcionário: {{cargoEscolhido.id_cargo}} </h5>
+        <div class="card-body">
+
+          <div class="mb-3">
+            <label class="form-label">Nome do Cargo</label>
+            <input type="text" readonly class="form-control" [(ngModel)]="cargoEscolhido.car_nome" name="car_nome">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Descrição do Cargo</label>
+            <input type="text"readonly class="form-control"  [(ngModel)]="cargoEscolhido.car_descricao" name="car_descricao">
+          </div>
+          <hr>
+          <h5 class="card-title"> Escolha novo cargo para o Funcionário:</h5>
+
+          <hr>
+          <select [(ngModel)]="cargoEscolhido" name="cargoEscolhido" (ngModelChange)="mostrarCargo()" >
+            <option *ngFor="let cargo of cargos" [ngValue]="cargo">
+              {{cargo.car_nome}} - {{cargo.car_descricao}}
+            </option>
+          </select>
+          <button (click)="atribuirCargo()" class="btn btn-outline-primary mx-3">Salvar</button>
+          <hr>
+          <div class="card">
+            <h5 class="card-title">Deixar Funcionário sem cargo?
+              <button (click)="deixarFuncionarioSemCargo()" class="btn btn-outline-danger mx-3">Confirmar</button>
+            </h5>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

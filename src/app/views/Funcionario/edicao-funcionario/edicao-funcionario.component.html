@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Editar Funcionário</h5>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Nome do Funcionário</label>
+        <input type="text" class="form-control" [(ngModel)]="funcionario.func_nome"  name="func_nome">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cidade do Funcionário</label>
+        <input type="text" class="form-control" [(ngModel)]="funcionario.func_cidade"  name="func_cidade">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Cargo do Funcionário</label>
+        <input type="text" class="form-control" [(ngModel)]="funcionario.func_cargo"  name="func_cargo">
+      </div>
+      
+      <div class="mb-3">
+        <label class="form-label">Foto do Funcionário</label>
+        <input type="file" class="form-control" [(ngModel)]="funcionario.func_foto"  name="func_foto">
+      </div>
+      <button (click)="editarFuncionario()" class="btn btn-outline-primary">Alterar</button>
+      <button (click)="cancelarEdicao()" class="btn btn-outline-secondary mx-3">Cancelar</button>
+    </form>
+
+  </div>
+</div>

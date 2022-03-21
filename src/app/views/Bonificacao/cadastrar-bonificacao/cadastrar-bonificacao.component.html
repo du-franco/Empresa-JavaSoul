@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Cadastro de Bonificação</h5>
+    <form>
+      <div class="mb-3">
+        <label class="form-label">Descrição</label>
+        <input type="text" class="form-control" [(ngModel)]="bonificacao.bo_descricao" name="bo_descricao">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Data de Pagamento</label>
+        <input type="date" class="form-control" [(ngModel)]="bonificacao.bo_dataPagamento" name="bo_dataPagamento">
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Valor</label>
+        <input type="text" class="form-control" [(ngModel)]="bonificacao.bo_valor" name="bo_valor"  >
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Status</label>
+        <input type="text" class="form-control" readonly value="PENDENTE" [(ngModel)]="bonificacao.bo_status" name="bo_status">
+      </div>
+      <button (click)=" cadastrarBonificacao()" class="btn btn-outline-primary ">Cadastrar</button>
+      <button (click)="cancelarCadastro()" class="btn btn-outline-secondary mx-3">Cancelar</button>
+    </form>
+
+  </div>
+</div>

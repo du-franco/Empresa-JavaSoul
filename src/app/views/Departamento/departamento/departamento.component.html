@@ -1,0 +1,62 @@
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+      <div class="card mt-3">
+        <div class="card-body">
+          <h5 class="card-title">Dados do Cargo</h5>
+          <form>
+            <div class="mb-3">
+              <label class="form-label">Nome do Cargo</label>
+              <input type="text" readonly class="form-control" [(ngModel)]="cargo.car_nome" name="car_nome"  >
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Descrição do Cargo</label>
+              <input type="text" readonly class="form-control" [(ngModel)]="cargo.car_descricao" name="car_descricao" >
+            </div>
+            <button routerLink="/cargo" class="btn btn-outline-dark mx-3">Cancelar</button>
+          </form>
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-7">
+      <div class="card mt-3">
+        <h5 class="card-title mx-3">Departamento do Cargo: {{departamento.id_departamento}}</h5>
+        <div class="card-body">
+
+          <div class="mb-3">
+            <label class="form-label">Nome do Departamento</label>
+            <input type="text" readonly class="form-control" [(ngModel)]="departamento.dep_nome" name="dep_nome">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Descrição do Departamento</label>
+            <input type="text"readonly class="form-control" [(ngModel)]="departamento.dep_descricao" name="dep_descricao">
+          </div>
+          <hr>
+          <div class="card">
+          <h5 class="card-title my-4"> Escolha um novo departamento para o cargo:</h5>
+
+
+          <div class="card-body">
+          <select [(ngModel)]="departamentoSemCargo" name="departamentoSemCargo" (ngModelChange)="mostrarDepartamento()" >
+              <option *ngFor="let departamento of departamentoSemCargo" [ngValue]="departamento">
+                {{departamento.dep_nome}} - {{departamento.dep_descricao}}
+              </option>
+            </select>
+            <button (click)="atribuirDepartamento()" class="btn btn-outline-primary mx-3 mt-3 mb-3">Salvar</button>
+          </div>
+        </div>
+          <hr>
+          <div class="card my-3">
+            <h5 class="card-title">Deixar Cargo sem Departamento?</h5>
+            <div class="card-body">
+            <button (click)=" deixarCargoSemDepartamento()" class="btn btn-outline-danger">Confirmar</button>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
