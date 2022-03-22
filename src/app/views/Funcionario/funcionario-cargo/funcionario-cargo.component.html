@@ -14,14 +14,16 @@
   </div>
 </div>
 
+
+
 <div *ngFor="let funcionario of func | filter:filter; let i = index">
   <div class="container-fluid">
     <div class="row justify-content-center mt-5 mx-1">
-      <div class="card m-5 border-5 border-dark bg-white" style=" width: 300px;">
+      <div class="card m-5 border-5 border-dark bg-info" style=" width: 300px;">
         <div class="card-body">
           <img class="card-img" src="{{funcionario.func_foto}}" alt="">
 
-          <div class="card-title text-center text-black">
+          <div class="card-title text-center text-white bg-dark">
             <p>
               <b>Código:
                 {{funcionario.id_funcionario}}
