@@ -45,3 +45,9 @@ li {
   background:blue;
   color:white;
 }
+
+.settings {
+  transform: rotateY(180deg);
+}
+
+
